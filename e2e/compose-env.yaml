@@ -4,9 +4,8 @@ services:
     image: 'registry:2'
 
   engine:
-      image: 'docker:${ENGINE_VERSION:-26.1}-dind'
+      image: 'quay.io/powercloud/docker-ce-build@sha256:b00a990424d9bb4d3d4bf76f64ee2cf31992d1a9364e8cbf33c371380efeebe3'
       privileged: true
-      command: ['--insecure-registry=registry:5000']
       environment:
         - DOCKER_TLS_CERTDIR=
 
